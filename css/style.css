@@ -1151,3 +1151,11 @@ html[data-theme="dark"] .kfc-live-map { background: #252525; }
 html[data-theme="dark"] .kfc-live-map-head select, html[data-theme="dark"] #kfc-map-list button { background: #303030; color: var(--ink); }
 @media(max-width: 760px) { .kfc-live-map-layout { grid-template-columns: 1fr; } .kfc-map-results { max-height: 220px; } }
 @media(max-width: 480px) { .kfc-live-map { padding: 14px; } .kfc-live-map-head { flex-direction: column; } .kfc-live-map iframe { height: 290px; } }
+
+/* Keep the gallery heading on the same surface as the photos in both themes. */
+body.gallery-redesign .gallery-intro,
+html[data-theme="dark"] body.gallery-redesign .gallery-intro {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
