@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Project: KFC Kazakhstan Fan Project | Group: SE-2510 | Page: Reviews & Feedback Page (contacts.html) -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KFC Kazakhstan — Reviews &amp; Feedback</title>
+<link href="css/style.css?v=promo-hover-unified-3" rel="stylesheet"/>
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header id="main-header">
+<div class="header-container">
+<a class="logo" href="index.html">
+<img alt="KFC Logo" class="logo-img" src="images/logo.jpg"/>
+</a>
+<nav class="nav-menu">
+<ul>
+<li><a class="nav-btn" href="index.html">Main Menu</a></li>
+<li><a class="nav-btn" href="menu.html">Food Menu</a></li>
+<li><a class="nav-btn" href="promos.html">Special Offers</a></li>
+<li><a class="nav-btn" href="about.html">Our Team</a></li>
+<li><a class="nav-btn" href="schedule.html">Location &amp; Schedule</a></li>
+<li><a class="nav-btn active" href="contacts.html">Reviews &amp; Feedback</a></li>
+<li><a class="nav-btn" href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+<a class="header-account-link" href="login.html">Account</a>
+<button class="header-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme"><span aria-hidden="true">☾</span></button>
+<button class="site-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="site-drawer-backdrop" hidden></div><aside class="site-drawer" id="site-drawer" aria-label="Site menu" aria-hidden="true" inert><div class="site-drawer-head"><strong>Menu</strong><button class="site-drawer-close" type="button" aria-label="Close menu">×</button></div><nav class="site-drawer-nav" aria-label="Page navigation"></nav><div class="site-drawer-tools"><a class="drawer-account-link" href="login.html">Account</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button><button class="assignment-btn" id="subscribe-open-btn" type="button">Subscribe</button><span aria-label="Current date and time" id="live-clock" role="timer"></span></div></aside>
+<main class="main-content">
+<div class="container">
+<h1 class="page-title">Customer Reviews &amp; Feedback</h1>
+<div class="reviews-page-grid">
+<!-- Section 1: Review Submission Form -->
+<div class="review-form-container">
+<h2>Leave Your Feedback</h2>
+<div class="review-login-prompt" id="review-login-prompt" hidden><p>Log in or create an account to write a review.</p><div><a class="btn-red" href="login.html?next=contacts.html">Log In</a><a class="review-signup-link" href="signup.html?next=contacts.html">Sign Up</a></div></div>
+<form id="contact-form" novalidate hidden>
+<div class="form-group">
+<label for="author-name">Your Name:</label>
+<input id="author-name" placeholder="e.g. Alikhan" type="text" readonly/>
+</div>
+<div class="form-group">
+<label for="author-email">Your Email:</label>
+<input id="author-email" placeholder="e.g. alikhan@example.com" type="text" readonly/>
+</div>
+<div class="form-group">
+<label for="rating-select">Rating:</label>
+<select class="rating-hidden-select" id="rating-select">
+<option value="⭐⭐⭐⭐⭐">5 Stars (Excellent)</option>
+<option value="⭐⭐⭐⭐">4 Stars (Good)</option>
+<option value="⭐⭐⭐">3 Stars (Average)</option>
+<option value="⭐⭐">2 Stars (Poor)</option>
+<option value="⭐">1 Star (Terrible)</option>
+</select><div aria-label="Choose star rating" class="star-picker" role="group"><button aria-label="1 star" data-rating="1" type="button">★</button><button aria-label="2 stars" data-rating="2" type="button">★</button><button aria-label="3 stars" data-rating="3" type="button">★</button><button aria-label="4 stars" data-rating="4" type="button">★</button><button aria-label="5 stars" data-rating="5" type="button">★</button></div>
+</div>
+<div class="form-group">
+<label for="review-message">Your Review:</label>
+<textarea id="review-message" placeholder="Share your experience about food or service..." rows="5"></textarea>
+</div>
+<p class="assignment-error" id="review-validation-message" role="alert"></p>
+<button class="btn-submit" type="submit">Submit Review</button>
+</form>
+</div>
+<!-- Section 2: Recent Reviews List -->
+<div class="reviews-list-container">
+<h2>Recent Reviews</h2><div class="review-controls"><span aria-live="polite" id="review-summary"></span><label for="review-sort">Sort by</label><select id="review-sort"><option value="newest">Newest first</option><option value="highest">Highest rated</option><option value="lowest">Lowest rated</option></select></div>
+<div class="reviews-feed" id="reviews-feed">
+<!-- Rendered feedback items -->
+<div class="feed-item kfc-smooth-hover">
+<div class="feed-header">
+<span class="feed-author">Artem Saharov</span>
+<span class="feed-stars">⭐⭐⭐⭐⭐</span>
+</div>
+<p class="feed-text">"Best crispy wings in town! But I love popeyes more"</p>
+<span class="feed-date">September 12, 2026</span>
+</div>
+<div class="feed-item kfc-smooth-hover">
+<div class="feed-header">
+<span class="feed-author">Aruzhan S.</span>
+<span class="feed-stars">⭐⭐⭐⭐⭐</span>
+</div>
+<p class="feed-text">"Love the Calculus Retake discount! Food arrived hot and fresh."</p>
+<span class="feed-date">September 10, 2026</span>
+</div>
+<div class="feed-item kfc-smooth-hover">
+<div class="feed-header">
+<span class="feed-author">Burmalda</span>
+<span class="feed-stars">⭐⭐⭐⭐</span>
+</div>
+<p class="feed-text">"Great Twister Wrap, but they ran out of toilet paper."</p>
+<span class="feed-date">September 08, 2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div aria-hidden="true" class="assignment-modal" id="subscribe-modal"><div aria-labelledby="subscribe-title" aria-modal="true" class="assignment-modal-dialog" role="dialog"><button aria-label="Close" class="assignment-modal-close" id="subscribe-close-btn" type="button">×</button><h2 id="subscribe-title">Subscribe to KFC Updates</h2><form id="subscribe-form" novalidate=""><label for="subscriber-name">Name</label><input autocomplete="name" id="subscriber-name" type="text"/><label for="subscriber-email">Email</label><input autocomplete="email" id="subscriber-email" type="text"/><p class="assignment-error" id="subscribe-error" role="alert"></p><button class="assignment-btn" type="submit">Subscribe</button><p id="subscribe-success" role="status"></p></form></div></div>
+<footer>
+<div class="footer-container">
+<p>Created by: <span>Zharkyn Akhmetov, Alnur Bakbergenov, Khantore Orynbassar</span> | Group: <span>SE-2510</span></p>
+<p>© 2026 KFC Kazakhstan Fan Project. All Rights Reserved.</p>
+</div>
+</footer>
+<script src="js/cart.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/site-menu.js"></script>
+<script src="js/account.js"></script>
+</body>
+</html>

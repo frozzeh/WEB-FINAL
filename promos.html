@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Project: KFC Kazakhstan Fan Project | Group: SE-2510 | Page: Special Offers Page (promos.html) -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KFC Kazakhstan — Special Offers</title>
+<link href="css/style.css?v=promo-hover-unified-3" rel="stylesheet"/>
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header id="main-header">
+<div class="header-container">
+<a class="logo" href="index.html">
+<!-- Placeholder for the main KFC Logo image -->
+<img alt="KFC Logo" class="logo-img" src="images/logo.jpg"/>
+</a>
+<nav class="nav-menu">
+<ul>
+<li><a class="nav-btn" href="index.html">Main Menu</a></li>
+<li><a class="nav-btn" href="menu.html">Food Menu</a></li>
+<li><a class="nav-btn active" href="promos.html">Special Offers</a></li>
+<li><a class="nav-btn" href="about.html">Our Team</a></li>
+<li><a class="nav-btn" href="schedule.html">Location &amp; Schedule</a></li>
+<li><a class="nav-btn" href="contacts.html">Reviews &amp; Feedback</a></li>
+<li><a class="nav-btn" href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+<a class="header-account-link" href="login.html">Account</a>
+<button class="header-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme"><span aria-hidden="true">☾</span></button>
+<button class="site-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="site-drawer-backdrop" hidden></div><aside class="site-drawer" id="site-drawer" aria-label="Site menu" aria-hidden="true" inert><div class="site-drawer-head"><strong>Menu</strong><button class="site-drawer-close" type="button" aria-label="Close menu">×</button></div><nav class="site-drawer-nav" aria-label="Page navigation"></nav><div class="site-drawer-tools"><a class="drawer-account-link" href="login.html">Account</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button><button class="assignment-btn" id="subscribe-open-btn" type="button">Subscribe</button><span aria-label="Current date and time" id="live-clock" role="timer"></span></div></aside>
+<main class="main-content">
+<div class="container">
+<h1 class="page-title">Hot Student Deals &amp; Promotions</h1>
+<section aria-label="Featured student offers" class="promo-hero"><div class="promo-hero-copy"><span class="promo-kicker">STUDENT SPECIALS</span><h2>Big flavor.<br/>Student-sized deals.</h2><p>Explore our legendary campus-inspired offers.</p><a class="promo-hero-link" href="#offers-list" id="explore-offers-btn">Explore offers ↓</a></div><img alt="Existing Friends Bucket promotion" src="images/student-special-combo.png"/></section><div class="promo-mini-banner"><img alt="Fries from our current menu" src="images/draft-free-combo.jpg"/><div><span class="promo-kicker">CAMPUS FAVORITES</span><h3>More reasons to take a study break.</h3><p>Discover the offers already on our menu.</p></div></div><div class="promo-grid" id="offers-list">
+<!-- Promo Card 1 -->
+<div class="promo-card">
+<!-- Promotional image: Calculus Retake -->
+<div class="dish-img-container">
+<img alt="Calculus Retake Relief" class="dish-img" src="images/calculus-combo.jpg"/>
+</div>
+<div class="card-title">Calculus Retake Relief</div>
+<p class="card-desc">Got a retake in Calculus? Get a 50% discount on your order!</p>
+<button class="btn-red offer-open" data-offer="calculus" type="button">Get Student Deal</button>
+</div>
+<!-- Promo Card 2 -->
+<div class="promo-card">
+<!-- Promotional image: Draft-Free Combo -->
+<div class="dish-img-container">
+<img alt="Draft-Free Combo Bonus" class="dish-img" src="images/campus-favorites.png"/>
+</div>
+<div class="card-title">Draft-Free Combo Bonus</div>
+<p class="card-desc">Are you 18+ but not serving yet and not enrolled? Get a FREE Combo — no military draft officers here!</p>
+<button class="btn-red offer-open" data-offer="draft" type="button">Get Free Combo</button>
+</div>
+<!-- Promo Card 3 -->
+<div class="promo-card">
+<!-- Promotional image: Friends Bucket -->
+<div class="dish-img-container">
+<img alt="Friends Bucket" class="dish-img" src="images/friends-bucket-combo.jpg"/>
+</div>
+<div class="card-title">Friends Bucket</div>
+<p class="card-desc">Order a large bucket with your classmates and get 25% OFF the total order.</p>
+<button class="btn-red offer-open" data-offer="friends" type="button">Get Discount</button>
+</div>
+</div>
+<section class="section-block">
+<h2 class="section-subtitle">How to Get a Student Deal</h2>
+<div class="story-card">
+<ol class="steps-list">
+<li>Choose your favorite promotion above.</li>
+<li>Click the offer button and read the promotion conditions.</li>
+<li>Complete the short form to generate a demo coupon.</li>
+<li>Copy your demo coupon code (not valid at real restaurants).</li>
+</ol>
+</div>
+</section>
+</div>
+</main>
+<div aria-hidden="true" class="assignment-modal" id="subscribe-modal"><div aria-labelledby="subscribe-title" aria-modal="true" class="assignment-modal-dialog" role="dialog"><button aria-label="Close" class="assignment-modal-close" id="subscribe-close-btn" type="button">×</button><h2 id="subscribe-title">Subscribe to KFC Updates</h2><form id="subscribe-form" novalidate=""><label for="subscriber-name">Name</label><input autocomplete="name" id="subscriber-name" type="text"/><label for="subscriber-email">Email</label><input autocomplete="email" id="subscriber-email" type="text"/><p class="assignment-error" id="subscribe-error" role="alert"></p><button class="assignment-btn" type="submit">Subscribe</button><p id="subscribe-success" role="status"></p></form></div></div>
+<div id="offer-modal" class="assignment-modal" aria-hidden="true"><div class="assignment-modal-dialog offer-dialog" role="dialog" aria-modal="true" aria-labelledby="offer-title"><button type="button" class="assignment-modal-close" id="offer-close" aria-label="Close offer">×</button><div class="offer-layout"><img id="offer-photo" src="" alt="Promotion meal"><div><span class="team-eyebrow">STUDENT SPECIALS</span><h2 id="offer-title"></h2><p id="offer-description"></p><p class="offer-disclaimer">This is a student website demo. Coupons are not redeemable at real KFC restaurants.</p><form id="offer-form" novalidate><label for="offer-name">Your name</label><input id="offer-name" type="text" placeholder="Enter your name"><label for="offer-id" id="offer-id-label">Student ID / reference</label><input id="offer-id" type="text" placeholder="Enter your reference"><p class="assignment-error" id="offer-error" role="alert"></p><button class="btn-red" type="submit">Claim Demo Offer</button></form><div id="offer-result" class="offer-result" hidden><strong>✓ Demo offer claimed!</strong><p id="offer-code"></p><button id="offer-add-cart" class="btn-red" type="button">Add offer to cart</button> <button id="offer-copy" class="assignment-btn" type="button">Copy code</button></div></div></div></div></div>
+<footer>
+<div class="footer-container">
+<p>Created by: <span>Zharkyn Akhmetov, Alnur Bakbergenov, Khantore Orynbassar</span> | Group: <span>SE-2510</span></p>
+<p>© 2026 KFC Kazakhstan Fan Project. All Rights Reserved.</p>
+</div>
+</footer>
+<script src="js/cart.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/site-menu.js"></script>
+<script src="js/account.js"></script>
+
+<script src="js/promos-scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Project: KFC Kazakhstan Fan Project | Group: SE-2510 | Page: Location & Schedule Page (schedule.html) -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KFC Kazakhstan — Location &amp; Schedule</title>
+<link href="css/style.css?v=promo-hover-unified-3" rel="stylesheet"/>
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header id="main-header">
+<div class="header-container">
+<a class="logo" href="index.html">
+<img alt="KFC Logo" class="logo-img" src="images/logo.jpg"/>
+</a>
+<nav class="nav-menu">
+<ul>
+<li><a class="nav-btn" href="index.html">Main Menu</a></li>
+<li><a class="nav-btn" href="menu.html">Food Menu</a></li>
+<li><a class="nav-btn" href="promos.html">Special Offers</a></li>
+<li><a class="nav-btn" href="about.html">Our Team</a></li>
+<li><a class="nav-btn active" href="schedule.html">Location &amp; Schedule</a></li>
+<li><a class="nav-btn" href="contacts.html">Reviews &amp; Feedback</a></li>
+<li><a class="nav-btn" href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+<a class="header-account-link" href="login.html">Account</a>
+<button class="header-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme"><span aria-hidden="true">☾</span></button>
+<button class="site-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="site-drawer-backdrop" hidden></div><aside class="site-drawer" id="site-drawer" aria-label="Site menu" aria-hidden="true" inert><div class="site-drawer-head"><strong>Menu</strong><button class="site-drawer-close" type="button" aria-label="Close menu">×</button></div><nav class="site-drawer-nav" aria-label="Page navigation"></nav><div class="site-drawer-tools"><a class="drawer-account-link" href="login.html">Account</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button><button class="assignment-btn" id="subscribe-open-btn" type="button">Subscribe</button><span aria-label="Current date and time" id="live-clock" role="timer"></span></div></aside>
+<main class="main-content">
+<div class="container">
+<h1 class="page-title">Restaurant Opening Hours &amp; Locations</h1>
+<section class="weather-widget" aria-labelledby="weather-title"><div><h2 id="weather-title">Weather in Astana</h2><p id="weather-status" role="status" aria-live="polite">Loading weather...</p></div><button id="weather-retry" type="button" hidden>Retry</button><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a></section>
+<section class="kfc-live-map" aria-labelledby="live-map-title">
+<div class="kfc-live-map-head"><div><h2 id="live-map-title">KFC locations on the map</h2><p>Live location data from OpenStreetMap. Select a restaurant to focus the map.</p></div><label for="map-city">City <select id="map-city"><option value="astana">Astana</option><option value="almaty">Almaty</option><option value="shymkent">Shymkent</option></select></label></div>
+<div class="kfc-live-map-layout"><iframe id="kfc-map-frame" title="Map of KFC locations in Astana" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="kfc-map-results"><p id="kfc-map-status" role="status" aria-live="polite">Loading mapped restaurants...</p><div id="kfc-map-list"></div><button id="kfc-map-retry" type="button" hidden>Retry</button></div></div>
+<p class="kfc-map-source">Map and location data: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>. Mapped locations may differ from the schedule examples below.</p>
+</section>
+<!-- Astana Locations Section -->
+<div class="location-card kfc-smooth-hover">
+<div class="location-map">
+<!-- Placeholder for Astana city map image -->
+<img alt="Astana Map" src="images/astana.JPEG"/>
+</div>
+<div class="location-details">
+<h3>Astana Stores</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Address</th>
+<th>Working Hours</th>
+<th>Drive-Thru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Mangilik El Ave, 55</td>
+<td>09:00 AM - 11:00 PM</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Turan Ave, 37</td>
+<td>10:00 AM - 10:00 PM</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Respublika Ave, 18</td>
+<td>09:00 AM - 12:00 AM</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Almaty Locations Section -->
+<div class="location-card kfc-smooth-hover">
+<div class="location-map">
+<!-- Placeholder for Almaty city map image -->
+<img alt="Almaty Map" src="images/almaty.JPEG"/>
+</div>
+<div class="location-details">
+<h3>Almaty Stores</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Address</th>
+<th>Working Hours</th>
+<th>Drive-Thru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Dostyk Ave, 105</td>
+<td>10:00 AM - 10:00 PM</td>
+<td>No</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Abay Ave, 44</td>
+<td>09:00 AM - 11:00 PM</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Seyfullin Ave, 500</td>
+<td>10:00 AM - 11:00 PM</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Shymkent Locations Section -->
+<div class="location-card kfc-smooth-hover">
+<div class="location-map">
+<!-- Placeholder for Shymkent city map image -->
+<img alt="Shymkent Map" src="images/shymkent.JPEG"/>
+</div>
+<div class="location-details">
+<h3>Shymkent Stores</h3>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Address</th>
+<th>Working Hours</th>
+<th>Drive-Thru</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Tauke Khan Ave, 12</td>
+<td>09:00 AM - 11:00 PM</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Ryskulov St, 45</td>
+<td>10:00 AM - 10:00 PM</td>
+<td>No</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Baiterekov St, 88</td>
+<td>09:00 AM - 12:00 AM</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div aria-hidden="true" class="assignment-modal" id="subscribe-modal"><div aria-labelledby="subscribe-title" aria-modal="true" class="assignment-modal-dialog" role="dialog"><button aria-label="Close" class="assignment-modal-close" id="subscribe-close-btn" type="button">×</button><h2 id="subscribe-title">Subscribe to KFC Updates</h2><form id="subscribe-form" novalidate=""><label for="subscriber-name">Name</label><input autocomplete="name" id="subscriber-name" type="text"/><label for="subscriber-email">Email</label><input autocomplete="email" id="subscriber-email" type="text"/><p class="assignment-error" id="subscribe-error" role="alert"></p><button class="assignment-btn" type="submit">Subscribe</button><p id="subscribe-success" role="status"></p></form></div></div>
+<footer>
+<div class="footer-container">
+<p>Created by: <span>Zharkyn Akhmetov, Alnur Bakbergenov, Khantore Orynbassar</span> | Group: <span>SE-2510</span></p>
+<p>© 2026 KFC Kazakhstan Fan Project. All Rights Reserved.</p>
+</div>
+</footer>
+<script src="js/cart.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/site-menu.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/kfc-map.js"></script>
+<script src="js/account.js"></script>
+</body>
+</html>

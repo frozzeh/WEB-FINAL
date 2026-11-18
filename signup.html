@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — KFC Kazakhstan</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<header id="main-header">
+<div class="header-container">
+<a class="logo" href="index.html">
+<img alt="KFC Logo" class="logo-img" src="images/logo.jpg"/>
+</a>
+<nav class="nav-menu">
+<ul>
+<li><a class="nav-btn active" href="index.html">Main Menu</a></li>
+<li><a class="nav-btn" href="menu.html">Food Menu</a></li>
+<li><a class="nav-btn" href="promos.html">Special Offers</a></li>
+<li><a class="nav-btn" href="about.html">Our Team</a></li>
+<li><a class="nav-btn" href="schedule.html">Location &amp; Schedule</a></li>
+<li><a class="nav-btn" href="contacts.html">Reviews &amp; Feedback</a></li>
+<li><a class="nav-btn" href="gallery.html">Gallery</a></li>
+</ul>
+</nav>
+<a class="header-account-link" href="login.html">Account</a>
+<button class="header-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme"><span aria-hidden="true">☾</span></button>
+<button class="site-menu-toggle" type="button" aria-label="Open menu" aria-controls="site-drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="site-drawer-backdrop" hidden></div><aside class="site-drawer" id="site-drawer" aria-label="Site menu" aria-hidden="true" inert><div class="site-drawer-head"><strong>Menu</strong><button class="site-drawer-close" type="button" aria-label="Close menu">×</button></div><nav class="site-drawer-nav" aria-label="Page navigation"></nav><div class="site-drawer-tools"><a class="drawer-account-link" href="login.html">Account</a><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark mode</button><button class="assignment-btn" id="subscribe-open-btn" type="button">Subscribe</button><span aria-label="Current date and time" id="live-clock" role="timer"></span></div></aside>
+<main class="main-content account-page"><div class="container"><section class="account-card"><h1>Sign Up</h1><p class="account-intro">Create an account for this student website.</p><form id="signup-form" novalidate><div class="account-field"><label for="signup-name">Name</label><input id="signup-name" name="signup-name" type="text" autocomplete="name" aria-describedby="signup-name-error"><p class="account-error" id="signup-name-error"></p></div><div class="account-field"><label for="signup-email">Email</label><input id="signup-email" name="signup-email" type="text" autocomplete="email" aria-describedby="signup-email-error"><p class="account-error" id="signup-email-error"></p></div><div class="account-field"><label for="signup-password">Password</label><input id="signup-password" name="signup-password" type="password" autocomplete="new-password" aria-describedby="signup-password-error"><p class="account-error" id="signup-password-error"></p></div><div class="account-field"><label for="signup-confirm">Confirm password</label><input id="signup-confirm" name="signup-confirm" type="password" autocomplete="new-password" aria-describedby="signup-confirm-error"><p class="account-error" id="signup-confirm-error"></p></div><p class="account-hint">Use at least 8 characters, including uppercase, lowercase, a number and a symbol.</p><p class="account-status" id="signup-status" role="alert"></p><button class="btn-red" type="submit">Create account</button></form><p class="account-switch">Already have an account? <a href="login.html">Log In</a></p></section></div></main>
+<div aria-hidden="true" class="assignment-modal" id="subscribe-modal"><div aria-labelledby="subscribe-title" aria-modal="true" class="assignment-modal-dialog" role="dialog"><button aria-label="Close" class="assignment-modal-close" id="subscribe-close-btn" type="button">×</button><h2 id="subscribe-title">Subscribe to KFC Updates</h2><form id="subscribe-form" novalidate=""><label for="subscriber-name">Name</label><input autocomplete="name" id="subscriber-name" type="text"/><label for="subscriber-email">Email</label><input autocomplete="email" id="subscriber-email" type="text"/><p class="assignment-error" id="subscribe-error" role="alert"></p><button class="assignment-btn" type="submit">Subscribe</button><p id="subscribe-success" role="status"></p></form></div></div>
+<footer>
+<div class="footer-container">
+<p>Created by: <span>Zharkyn Akhmetov, Alnur Bakbergenov, Khantore Orynbassar</span> | Group: <span>SE-2510</span></p>
+<p>© 2026 KFC Kazakhstan Fan Project. All Rights Reserved.</p>
+</div>
+</footer>
+<script src="js/cart.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/script.js"></script>
+<script src="js/site-menu.js"></script>
+<script src="js/account.js"></script>
+</body></html>
