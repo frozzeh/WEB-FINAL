@@ -77,15 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.faq-question').forEach(button => {
         const answer = button.nextElementSibling;
         if (!answer) return;
+        let animation = null;
         button.addEventListener('click', () => {
-            const wasOpen = button.getAttribute('aria-expanded') === 'true';
-            const currentHeight = answer.getBoundingClientRect().height;
-            answer.style.maxHeight = `${currentHeight}px`;
-            answer.offsetHeight;
-            button.setAttribute('aria-expanded', String(!wasOpen));
-            answer.classList.toggle('is-open', !wasOpen);
-            button.querySelector('span').textContent = wasOpen ? '+' : '−';
-            answer.style.maxHeight = wasOpen ? '0px' : `${answer.scrollHeight}px`;
+            const opening = button.getAttribute('aria-expanded') !== 'true';
+            const from = answer.getBoundingClientRect().height;
+            animation?.cancel();
+            answer.style.height = `${from}px`;
+            const to = opening ? answer.scrollHeight : 0;
+            button.setAttribute('aria-expanded', String(opening));
+            answer.classList.toggle('is-open', opening);
+            button.querySelector('span').textContent = opening ? '−' : '+';
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                answer.style.height = opening ? 'auto' : '0px';
+                animation = null;
+                return;
+            }
+            animation = answer.animate(
+                [{ height: `${from}px` }, { height: `${to}px` }],
+                { duration: 420, easing: 'ease-in-out', fill: 'forwards' }
+            );
+            const currentAnimation = animation;
+            animation.onfinish = () => {
+                if (animation !== currentAnimation) return;
+                answer.style.height = opening ? 'auto' : '0px';
+                currentAnimation.cancel();
+                animation = null;
+            };
         });
     });
 
